@@ -1,0 +1,54 @@
+#firstdiv {
+    background-color: rgb(255, 129, 188);
+    height: 125px; /* Same as image height */
+    overflow: hidden; /* Hide any overflow if necessary */
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center items */
+    gap: 80px; /* Adds space between the image and text */
+    
+}
+
+
+.navbar {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin: 0; /* Removes default margin */
+    padding: 20;
+  
+}
+#gif-container {
+    height:500;
+    width: 400;
+    display: flex; /* Align child elements horizontally */
+    align-items: center; /* Vertically center images */
+    gap: 100px; /* Space between images */
+    margin-top: 20px; /* Space above the GIF container */
+    position: relative; /* Ensure positioning context if needed */
+}
+#gif {
+    
+    max-width: 100%; /* Ensure the GIF does not exceed its container's width */
+    height: auto; /* Maintain the aspect ratio */   
+}
+#statement1{
+    margin: 30px;
+    background-size: 500;
+    font-weight: 600;
+    font-size: 60px;
+    
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.busbuddy {
+    color: rgb(236, 65, 65);
+    font-weight: bold;
+    font-size: 60px; /* Set a larger font size for the "BusBuddy" text */
+}
+.custom-hr {
+    border: 2px solid tomato;
+    width: 50%;
+    margin-left: 40px;
+}
+
