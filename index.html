@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <div id="firstdiv">
-        <img src="logo.png" height="150" width="150">
+        <img src="busbuddy.png" height="150" width="150" alt="BusBuddy Logo">
         <p class="navbar"><a href="index.html">Home</a></p>
-        <p class="navbar"> details</p>
+        <p class="navbar"><a href="servicedetails.html" target="_blank">Service details</a></p>
         <p class="navbar">Schools</p>
-        <p class="navbar"><a href="registration.html" target="_blank">Registration</a></p>
-        <p class="navbar"><a href="Login.html" target="_blank">Login</a></p>
-      
-
+        <p class="navbar dropdown">
+            <a href="#">Registration</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+            </ul>
+        </p>
+        <!-- <p class="navbar">Registration</p>
+        <ul class="dropdown">
+            <li>f</li>
+            <li>g</li>
+        </ul> -->
+        <p class="navbar"><a href="Login2.html" target="_blank">Login</a></p>
+        <p class="navbar"><a href="#footy">About us</a></p>
     </div>
     <div id="gif-container">
         <h2 id="statement1">
@@ -23,11 +35,29 @@
             A Safety Landmark <br>For Your Kids
         </h2>
         <br>
-        <img height="600" width="500"src="pic3.gif" alt="schoolbus" id="gif">
-       
+        <img height="600" width="500" src="pic3.gif" alt="School Bus" id="gif">
     </div>
     <hr class="custom-hr">
-    <link rel="stylesheet" href="stylesheet.css">
-
+    
+    <div class="foot">
+        <section id="footy">
+        <footer>
+            <div>
+            <h4 class="foothead">About us</h4>
+            <p class="para">Address: Mohammodpur, Busstand</p>
+            </div>
+            <div>
+            <h4 class="foothead">Contact us</h4>
+            <p class="para">Phone: +880123485011</p>
+            <p class="para">Email: jumana.muntaha@ulab.bd</p>
+            </div>
+            <div>
+                <h4 class="foothead">Useful Links</h4>
+                <p class="para"><a href="servicedetails.html">Service details</a></p>
+                <p class="para"><a href="schools.html">Schools</a></p>
+            </div>
+        </footer>
+        </section>
+    </div>
 </body>
 </html>
