@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: tomato;
+    background-image: url("pic8.jpg");
+    background-size: 200px 200px;
+    background-position: center;
+}
+
+.wrapper {
+    align-items: center;
+    justify-content: center;
+    width: 430px;
+    background:linear-gradient(to bottom right, rgb(105, 23, 173), rgb(228, 130, 18));
+    opacity: 0.9;
+    border: 2px solid rgb(245, 245, 220);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.input-info {
+    margin-bottom: 20px;
+    align-items: center;
+}
+.input-info textarea ::placeholder{
+    color: white;
+}
+
+.input-info textarea,
+.input-info input,
+.input-info select {
+    margin-right: 20px;
+    padding: 3%;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgb(218, 208, 208);
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.input-info input::placeholder {
+    color: white;
+}
+
+.input-info label {
+    display: flex;
+    margin-right: 10px;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.input-info label input[type="radio"] {
+    margin-left:40px; 
+    transform: scale(1.2); 
+    accent-color: rebeccapurple; 
+}
+.input-info fieldset{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper button.btn {
+    text-align: center;
+    width: 50%;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: inset;
+    font-size: 16px;
+    color: rebeccapurple;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.wrapper button.btn:hover {
+    background-color: rgb(201, 112, 212);
+}
+.first{
+    background-color: brown;
+    opacity: 0.9;
+    height: 110vh;
+    margin:0;
+}
+.first, .second {
+    flex: 1; 
+    padding: 20px;
+}
+.first img {
+    border-radius: 10px;
+    max-width: 100%; 
+    height: auto;
+    opacity: 1;
+}
+.first .text{
+    color: white;
+    font-weight: 600;
+}
