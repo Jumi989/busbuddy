@@ -1,9 +1,7 @@
 body{
     background-image: url("pic2.jpg");
     background-size: 500px 800px;
-    justify-content: center;
-    height: 100vh;
-   
+    height: 100vh;  
 }
 
 #firstdiv {
@@ -15,8 +13,9 @@ body{
     height: 150px; 
     overflow: hidden; 
     display: flex; 
+   
     align-items: center; 
-    gap: 80px; 
+    gap: 20px; 
     
 }
 
@@ -25,9 +24,7 @@ body{
     font-size: 20px;
     color: rgb(255, 255, 255);
     margin: 0; 
-    padding: 20;
-    position:relative;
-    display: inline-block;
+    padding: 20px;
   
 }
 #gif-container {
@@ -39,11 +36,11 @@ body{
     margin-top: 20px; 
     position: relative; 
 }
-#gif {
+/* #gif {
     
     max-width: 100%; 
     height: auto; 
-}
+} */
 #statement1{
     margin: 30px;
     background-size: 500;
@@ -60,21 +57,23 @@ a{
     font-weight: bold;
     font-size: 60px; /* Set a larger font size for the "BusBuddy" text */
 }
-.custom-hr {
-    border: 2px solid tomato;
-    width: 50%;
+/* .custom-hr {
+    border: 1.5px solid rgb(250, 112, 0);
+    width: 100%;
     margin-left: 40px;
-}
+} */
 .foot{
-    padding:30px;
+    box-sizing: border-box;
+    padding:20px;
     background-color: indigo;
     opacity: 0.8;
     width: 100%;
     display: flex;
     align-items: center; 
     position: relative; 
+    overflow: hidden;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:center;
 }
 .foot footer {
     display: flex;
@@ -93,36 +92,27 @@ a{
     font-weight: 500;
     color: white;
 }
-/* Style the dropdown container */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 10; /* Ensure it appears above other elements */
-    padding: 0;
-    margin: 0;
+.school{
+  display: flex;
+  justify-content: center;
+  padding:20px;
+  background-color: chocolate;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%; 
+    box-sizing: border-box; 
 }
-
-/* Style the dropdown links */
-.dropdown-content li {
-    list-style-type: none;
+.head{
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 600;
 }
-
-.dropdown-content li a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+.school h3{
+    color: #ffffff;
+    font-weight: 600;
 }
-
-/* Show the dropdown on hover */
-.navbar:hover.dropdown-content{
-    display: block;
-}
-
-/* Optionally, add a hover effect on the links inside the dropdown */
-.dropdown-content li a:hover {
-    background-color: #f1f1f1;
+.schooldetail{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
 }
