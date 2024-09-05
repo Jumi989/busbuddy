@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busbuddy</title>
     <link rel="stylesheet" href="stylereg2.css">
 </head>
 <body>
     <div class="wrapper">
-        <form action="http://localhost/myprojects/processform.php" method="POST">
+        <form action="">
             <h1>Pre-registration</h1>
             <div class="input-info">
-                <!-- <i class='bx bxs-user' ></i> -->
-                <input type="text" name="username" placeholder="Enter Username">
-                <!-- <i class='bx bxs-user' ></i> -->
+                <input type="text" placeholder="Enter Username">
             </div>
             <div class="input-info">
-                <!-- <i class='bx bx-lock'></i> -->
-                <input type="tel" name="contact_no" placeholder="Contact no.">
-                <!-- <i class='bx bx-lock'></i> -->
+                <input type="tel" placeholder="contact no.">
             </div>
             <div class="input-info">
-                <input type="text" name="child_name" placeholder="Child name">
+                <input type="text" placeholder="child name">
             </div>
             <div class="input-info">
-                <input type="date" name="dob" placeholder="Date of Birth (child)">
+                <input type="text" placeholder="school name">
             </div>
             <div class="input-info">
-                <input type="text" name="school_name" placeholder="School name">
+                <input type="password" placeholder="set password">
             </div>
-            <div class="input-info">
-                <input type="text" name="student_id" placeholder="Student ID">
-            </div>
-            <div class="input-info">
-                <input type="password" name="password_user" placeholder="Set password">
-            </div> 
-            
             <button type="submit" class="btn">Submit</button>
-            <!-- <div class="registration-link">
-                 <p>Dont have an account?<a href="#"><span style="color:white"><Pre>Register</Pre></span></a></p>
-            </div> -->
         </form>
-        
-        
     </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="overlay">
+            <div class="popupcontent">
+                <h2>Form Submitted</h2>
+                <br>
+                <p>Your pre-registration was successful.</p>
+                 <br>
+                <div class="controls">
+                    <button class="submit">Ok</button>
+                    <button class="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="reg2.js"></script>
 </body>
 </html>
