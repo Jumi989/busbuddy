@@ -15,25 +15,11 @@
             <p>Your pre-registration was successful.</p>
             <div class="controls">
                 <button class="close">Close</button>
-                <button class="go-back">Back to home</button>
+                <a href="index.html" class="go-back">Back to home</a>
             </div>
         </div>
     </div>
 
-    <script src="reg2.js">
-        // Show popup if status is success
-        window.onload = function() {
-            const params = new URLSearchParams(window.location.search);
-            const status = params.get('status');
-
-            if (status === 'success') {
-                document.getElementById('popup').style.display = 'block';
-            }
-
-            document.querySelector('.close').addEventListener('click', function() {
-                document.getElementById('popup').style.display = 'none';
-            });
-        };
-    </script>
+    <script src="reg2.js"></script>
 </body>
 </html>
