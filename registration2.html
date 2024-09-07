@@ -8,44 +8,33 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="">
+        <form action="http://localhost/myprojects/processform.php" method="POST">
             <h1>Pre-registration</h1>
             <div class="input-info">
-                <input type="text" placeholder="Enter Username">
+                <input type="text" name="user_name" placeholder="Enter Username">
             </div>
             <div class="input-info">
-                <input type="tel" placeholder="contact no.">
+                <input type="tel"name="contact_no" placeholder="contact no.">
             </div>
             <div class="input-info">
-                <input type="text" placeholder="child name">
+                <input type="text" name="child_name" placeholder="child name">
             </div>
             <div class="input-info">
-                <input type="text" placeholder="school name">
+                <input type="date" name="dob" placeholder="Date of Birth (child)">
             </div>
             <div class="input-info">
-                <input type="password" placeholder="set password">
+                <input type="text" name="school_name" placeholder="school name">
+            </div>
+            <div class="input-info">
+                <input type="text" name="student_id" placeholder="Student ID">
+            </div>
+            <div class="input-info">
+                <input type="password" name="password_user" placeholder="set password">
             </div>
             <button type="submit" class="btn">Submit</button>
         </form>
     </div>
 
-    <!-- Popup -->
-    <div class="popup" id="popup">
-        <div class="overlay">
-            <div class="popupcontent">
-                <h2>Form Submitted</h2>
-                <br>
-                <p>Your pre-registration was successful.</p>
-                 <br>
-                <div class="controls">
-                  
-                    <button class="close">Close</button>
-                    <button class="go-back">Back to home</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="reg2.js"></script>
 </body>
 </html>
+
