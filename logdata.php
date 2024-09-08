@@ -1,10 +1,23 @@
 <?php
 session_start();  // Start the session
 
+// Set session timeout (in seconds)
+$session_timeout = 120;  // 20 seconds timeout
+
+// Check if the session has expired
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $session_timeout) {
+    // Session has expired
+    session_unset();     // Unset session variables
+    session_destroy();   // Destroy the session
+    header("Location: http://localhost/busbuddy/Login2.html"); // Redirect to login page
+    exit();
+}
+$_SESSION['LAST_ACTIVITY'] = time(); // Update last activity time
+
 // Check if the user is logged in
 if (!isset($_SESSION['user_name'])) {
     // Redirect to login if not logged in
-    header("Location: Login2.html");
+    header("Location: http://localhost/busbuddy/Login2.html");
     exit();
 }
 
@@ -68,4 +81,3 @@ $result = $stmt->get_result();
 // Close the statement and connection
 $stmt->close();
 $conn->close();
-?>
