@@ -1,18 +1,53 @@
 /* Basic styles for the admin panel */
 body {
     font-family: Arial, sans-serif;
-    background-image:url("pic.jpg");
+   
     margin: 0;
     padding: 20px;
 }
-
-header {
-    text-align: center;
+.firstdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
     background: linear-gradient(to bottom right, rgb(81, 23, 173), rgb(228, 130, 18));
-    color: white;
     padding: 20px;
     border-radius: 10px;
 }
+
+header {
+    margin-left: 160px;
+    color: white;
+    text-align: center;
+    flex: 1;
+}
+
+.header-buttons {
+    margin-right: 70px;
+    display: flex;
+    gap: 10px;
+    transition: 0.3ms;
+}
+
+.header-buttons button {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.header-buttons button:hover {
+    background: linear-gradient(to bottom right, rgb(102, 63, 165), rgb(226, 164, 93));
+}
+a{
+    text-decoration: none;
+    color: darkslategrey;
+}
+
 
 h1, h2 {
     margin: 0;

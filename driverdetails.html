@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BusBuddy Admin Panel - Child Details</title>
-    <link rel="stylesheet" href="busdetails.css">
+    <link rel="stylesheet" href="driverdetails.css">
 </head>
 <body>
     <div class="firstdiv">
@@ -14,30 +14,28 @@
             
         </header>
         <div class="header-buttons">
-        <button id="add-bus"><a href="addbus.html">Add Bus</a></button>
+        <button id="add-bus"><a href="adddriver.html">Add Driver</a></button>
         <button id="go-back"><a href="authdashboard.html">Go Back</a></button>
         </div>
     
     </div>
-   
     
-    <section class="bus-details">
-        <table id="bus-table">
+    <section class="driver-details">
+        <table id="driver-table">
             <thead>
                 <tr>
-                    
-                    <th>Bus Number</th>
-                    <th>Liscense</th>
-                    <th>Location</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody id="bus-list">
-                
+            <tbody id="driver-list">
+                <!-- Child details will be populated here via JavaScript -->
             </tbody>
         </table>
     </section>
     
-    <script src="busdetails.js"></script>
+    <script src="driverdetails.js"></script>
 </body>
 </html>

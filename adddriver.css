@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: tomato;
+    background-image:url("cssdotpattern.png");
+    background-size:200px 200px;
+     background-position: centre;
+}
+.wrapper{
+   
+    width: 430px;
+    background-image: linear-gradient(to bottom right, rgb(214, 111, 14), rgb(132, 64, 146));
+    opacity: 0.95;
+    border: 2px solid color(245,245,220);
+    backdrop-filter:blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    color: beige;
+    border-radius: 10px;
+    padding: 30px 40px
+    
+
+}
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.wrapper.input-info{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    
+}
+.input-info input{
+    padding: 3%;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline:none;
+    border: 2px solid rgb(218, 208, 208);
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+   
+    padding-right: 20px;
+}
+.input-info input::placeholder{
+    color:white;
+}
+.wrapper button.btn{
+    /* align-items: center;
+    text-align: center; */
+    width: 100px;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+    border:none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow:inset;
+    font-size: 16px;
+    color: rebeccapurple;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;  
+    /* margin-left: 100px; */
+}
+.wrapper button.btn:hover{
+    background-color: rgb(146, 120, 120);
+}
+.wrapper.form-buttons{
+    background-color: aqua;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    gap: 100px;
+    margin-right: 100px;
+}
+
+.wrapper button.btn a{
+    text-decoration: none;
+    color: inherit; 
+    display: block; 
+   
+}
+
