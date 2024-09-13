@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Schedule</title>
+    <link rel="stylesheet" href="busschedule.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Select Bus Schedule</h1>
+    <div class="schedule-table">
+        <form id="scheduleForm" method="POST" action="submit_schedule.php">
+            <table id="scheduleTable">
+                <thead>
+                    <tr>
+                      
+                        <th>Bus Number</th>
+                        <th>Pickup-Point</th>
+                        <th>Departure Time</th>
+                        <th>fare</th>
+                        <th>Seats Available</th>
+                        <th>Select Your Schedule</th>
+
+                    </tr>
+                </thead>
+                <tbody id="scheduleBody">
+                    <!-- Schedule rows will be populated here -->
+                </tbody>
+            </table>
+            <br>
+            <!-- Submit button to confirm the selected schedule -->
+            <button type="submit" id="submitBtn" disabled>Confirm Selection</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

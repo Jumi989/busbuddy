@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    background-image: url("pic8.webp");
+    /* background-size: cover; */
+}
+
+.container {
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, rgb(238, 219, 159), rgb(253, 198, 176));
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.637);
+    border-color: 2px beige;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: rgb(41, 31, 31);
+}
+
+.schedule-table {
+    width: 100%;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid rgb(253, 198, 176);
+   
+}
+th{
+    background-color: #2d6353;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background-color: #6b8b73;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+
+button:hover:not(:disabled) {
+    background-color: #29412e;
+}
