@@ -1,0 +1,98 @@
+body{
+   
+    justify-content:center;
+    
+    background-image: linear-gradient(to bottom right, rgb(43, 102, 78), rgb(240, 165, 115));
+    height: 90vh;
+}
+a{
+    text-decoration: none;
+    color: darkslategrey;
+}
+.package {
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 20px; 
+    width: 200px;
+    height: 500px;
+    flex-wrap: wrap;
+    background-size: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.package:hover{
+    transform: scale(1.1);
+}
+#package1 :hover{
+    transform: scale(1.1);
+}
+ #package1{
+    background-image: url("package1.jpg");
+}
+#package2{
+    background-image: url("package3.jpg");
+}
+#package3{
+    background-image: url("package2.jpg");
+}
+.packagedeals{
+    background: transparent;
+    width: auto;
+    backdrop-filter: blur(10px);
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius:10px;
+    backdrop-filter:blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    
+}
+.header h1{
+     font-size: 50px;
+     font-weight: 700;
+     color: white;
+     text-align: center;
+     padding:0;
+}
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    width: 120px; /* Set a fixed width */
+    height: 40px; 
+    margin-left: 100px;
+   margin-bottom: 20px;
+}
+.header-buttons button {
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 120px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    display: flex; /* Center content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Ensure text is centered */
+    
+}
+.header-buttons button:hover {
+   background-color: rgb(255, 174, 145);
+}
+
+
+
