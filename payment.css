@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("pic8.webp");
+}
+
+.payment-window {
+    background-image: linear-gradient(to bottom right, rgb(238, 219, 159), rgb(253, 198, 176));
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.637);
+    max-width: 600px;
+    width: 100%;
+}
+
+.payment-window h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table th, table td {
+    border: 2px solid rgb(253, 198, 176);
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+}
+
+table th {
+    background-color: #2d6353;
+    color: white;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+.make-payment {
+    text-align: center;
+}
+
+#make-payment-btn {
+    padding: 10px 20px;
+    background-color: #8d8d7e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#make-payment-btn:hover {
+    background-color:#55554d;
+}
+
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker background for better focus */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    z-index: 1000; /* Ensure popup is above other elements */
+}
+
+.popup .popupcontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px; /* Limit width for better readability */
+    width: 90%; /* Responsive width */
+}
+
+.popup h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333; /* Neutral color for heading */
+}
+
+.popup p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666; /* Subtle text color */
+}
+
+.popup .controls {
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px; /* Add some space above buttons */
+}
+
+.popup .controls button {
+    padding: 10px 20px;
+    border: none;
+    background: #3f967c; /* Modern blue color */
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.popup .controls button:hover {
+    background-color: #1e4136; /* Slightly darker blue on hover */
+}
+/* 
+.controls.go-back a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s ease;
+} */
+a{
+    text-decoration: none;
+    color: white;
+}
+
