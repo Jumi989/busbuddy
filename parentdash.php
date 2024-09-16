@@ -1,27 +1,21 @@
 <?php
-session_start();  // Start the session
+session_start();
 
-// Set session timeout (in seconds)
-$session_timeout = 120; // Example: 20 minutes
+$session_timeout = 120;
 
-// Check if the session has expired
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $session_timeout) {
-    // Session has expired
-    session_unset();     // Unset session variables
-    session_destroy();   // Destroy the session
-    header("Location: http://localhost/busbuddy/Login2.html"); // Redirect to login page
+    session_unset();   
+    session_destroy(); 
+    header("Location: http://localhost/busbuddy/Login2.html");
     exit();
 }
-$_SESSION['LAST_ACTIVITY'] = time(); // Update last activity time
+$_SESSION['LAST_ACTIVITY'] = time(); 
 
-// Check if the user is logged in
 if (!isset($_SESSION['user_name'])) {
-    // Redirect to login if not logged in
     header("Location: http://localhost/busbuddy/Login2.html");
     exit();
 }
 
-// Retrieve the username from the session
 $user_name = $_SESSION['user_name'];
 ?>
 
@@ -60,16 +54,16 @@ $user_name = $_SESSION['user_name'];
             <p>Driver Information</p>
         </div>
         <div class="content">
-            <p>Pay-Online</p>
+            <p><a href="http://localhost/busbuddy/purchseservice.php">Buy a package</a></p>
         </div>
         <div class="content">
             <p><a href="http://localhost/busbuddy/logdata.php">Child Information</a></p>
         </div>
         <div class="content">
-            <p><a href="gotoservice.html">Avail Our GoTo Service</a></p>
+            <p><a href="http://localhost/busbuddy/reportanissue.php">Report an Issue</a></p>
         </div>
         <div class="content">
-            <p><a href="reportanissue.html">Report an Issue</a></p>
+            <p><a href="gotoservice.html">History</a></p>
         </div>
     </div>
 

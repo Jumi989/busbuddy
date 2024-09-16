@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Schedule</title>
+    <link rel="stylesheet" href="busschedule.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Select Bus Schedule</h1>
+    <div class="schedule-table">
+        <form id="scheduleForm" method="POST" action="submit_schedule.php">
+            <table id="scheduleTable">
+                <thead>
+                    <tr>
+                        <th>School Name</th>
+                        <th>Pickup Point</th>
+                        <th>Price</th>
+                        <th>Shift</th>
+                        <th>Select Your Schedule</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule-body">
+                    <!-- Schedule rows will be populated here -->
+                </tbody>
+            </table>
+            <br>
+            <div class="input-info">
+                <select id="days" name="days">
+                    <option value="" disabled selected>Select Days</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            
+            <!-- Hidden fields to store selected schedule details -->
+            <input type="hidden" name="school_name" id="school_name">
+            <input type="hidden" name="pickup_point" id="pickup_point">
+            <input type="hidden" name="price" id="price">
+            <input type="hidden" name="shift" id="shift">
+            <input type="hidden" name="user_name" id="user_name">
+            
+            <button type="submit" id="submitBtn" disabled>Request</button>
+        </form>
+        
+        <script>
+            function loadSchedule() {
+                fetch('http://localhost/busbuddy/daily.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        const scheduleBody = document.getElementById('schedule-body');
+                        
+                        data.forEach((schedule, index) => {
+                            // Morning shift row
+                            const morningRow = document.createElement('tr');
+                            morningRow.classList.add('clickable-row'); 
+        
+                            morningRow.innerHTML = `
+                                <td>${schedule.school_name}</td>
+                                <td>${schedule.disO}</td>
+                                <td>${schedule.daily} TK</td>
+                                <td>Morning (7am & 12pm)</td>
+                                <td>
+                                    <input type="radio" name="schedule" value="${schedule.school_name}|${schedule.disO}|${schedule.daily}|Morning" id="schedule-${index}-morning" class="radio-button">
+                                </td>
+                            `;
+                            scheduleBody.appendChild(morningRow);
+        
+                            // Day shift row
+                            const dayRow = document.createElement('tr');
+                            dayRow.classList.add('clickable-row');
+        
+                            dayRow.innerHTML = `
+                                <td>${schedule.school_name}</td>
+                                <td>${schedule.disO}</td>
+                                <td>${schedule.daily} TK</td>
+                                <td>Day (11am & 4pm)</td>
+                                <td>
+                                    <input type="radio" name="schedule" value="${schedule.school_name}|${schedule.disO}|${schedule.daily}|Day" id="schedule-${index}-day" class="radio-button">
+                                </td>
+                            `;
+                            scheduleBody.appendChild(dayRow);
+        
+                            // Add click event to select the radio button when the row is clicked for both rows
+                            [morningRow, dayRow].forEach(row => {
+                                row.addEventListener('click', function() {
+                                    const radioButton = row.querySelector('.radio-button');
+                                    radioButton.checked = true;
+                                    document.getElementById('submitBtn').disabled = false;
+        
+                                    // Update hidden inputs with selected values
+                                    const [schoolName, pickupPoint, price, shift] = radioButton.value.split('|');
+                                    document.getElementById('school_name').value = schoolName;
+                                    document.getElementById('pickup_point').value = pickupPoint;
+                                    document.getElementById('price').value = price;
+                                    document.getElementById('shift').value = shift;
+                                });
+                            });
+                        });
+                    })
+                    .catch(error => console.error('Error loading schedule:', error));
+            }
+        
+            // Load the schedule when the page loads
+            window.onload = function() {
+                loadSchedule();
+            };
+        </script>
+        
+</body>
+</html>
